@@ -35,7 +35,7 @@ left join programmatic_bi.beeswax_line_item bli on pp.dsp_line_item_id=bli.beesw
 join philo.conversion_metrics m on pp.upper_metric_id=m.id
 where pp.week>'2022-07-01' and c.slug='opendoor' and pp.dsp='Xandr'),
 
-     down_funnel as (
+down_funnel as (
 select pp.date as df_view_date,
     pp.company_id as df_client_id,
     c.slug as df_client_slug,
